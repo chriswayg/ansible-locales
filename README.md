@@ -1,6 +1,6 @@
 ## locales
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-locales.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-locales) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-locales-blue.svg)](https://galaxy.ansible.com/list#/roles/1526)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-locales.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-locales) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-locales-blue.svg)](https://galaxy.ansible.com/tersmitten/locales)
 
 Set locales on Debian-like systems.
 
@@ -16,6 +16,7 @@ None
  * `locales_language_packs_absent` [default: `[]`]:
  * `locales_default`:
    * `lang` [default: `[en_US.UTF-8]`]: Provides default value for LC_* variables that have not been explicitly set
+   * `language` [optional]: Same as above? But with higher priority, [see](http://www.gnu.org/software/gettext/manual/gettext.html#Locale-Environment-Variables)
    * `lc_address` [optional]: How addresses are formatted (country first or last, where zip code goes etc.)
    * `lc_all` [optional]: Overrides individual LC_* settings: if LC_ALL is set, none of the below have any effect
    * `lc_collate` [optional]: How strings (file names...) are alphabetically sorted. Using the "C" or "POSIX" locale here results in a strcmp()-like sort order, which may be preferable to language-specific locales
@@ -50,7 +51,7 @@ MIT
 
 #### Author Information
 
-Mischa ter Smitten (based on work of knopki and nickjj)
+Mischa ter Smitten (based on work of [knopki](https://github.com/knopki) and [nickjj](https://github.com/nickjj))
 
 #### Feedback, bug-reports, requests, ...
 
